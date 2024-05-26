@@ -1,6 +1,6 @@
-TLDR: Don't claim that my mods or any of their original contents such as textures and artwork are made by you. And don't try to monetize on them.
+TLDR: Don't claim that my mods or any of their original contents such as textures and artwork are made by you. Don't try to monetize on them. Keep them free for community to enjoy.
 
-I give permission to reupload my mods if you have fixed critical error or updated them
+I give permission to reupload my mods at steam workshop if you have fixed critical error or updated them
 to potential 1.6 version of Rimworld. Please, credit me and leave a link to steam page of
 the original item. Thank you and have fun ^-^
 
