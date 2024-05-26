@@ -1,4 +1,4 @@
-> TLDR: Don't claim that my mods or any of their original contents such as textures and artwork are made by you. And don't try to monetize on them.
+TLDR: Don't claim that my mods or any of their original contents such as textures and artwork are made by you. And don't try to monetize on them.
 
 I give permission to reupload my mods if you have fixed critical error or updated them
 to potential 1.6 version of Rimworld. Please, credit me and leave a link to steam page of
