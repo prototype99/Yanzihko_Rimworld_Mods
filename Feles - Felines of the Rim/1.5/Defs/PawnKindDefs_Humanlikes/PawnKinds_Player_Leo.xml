@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseLeoPawnKind">
+    <race>YanzihkoLeo</race>
+	<backstoryFiltersOverride>
+        <li>
+            <categories>
+                <li>000_G_GenIndustries_BackstoriesChildhood</li>
+				<li>000_G_GenIndustries_BackstoriesAdulthood</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    <combatPower>30</combatPower>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<xenotypeSet>
+      <xenotypeChances>
+        <YZRCM_LeoXenotype MayRequire="Ludeon.RimWorld.Biotech">1</YZRCM_LeoXenotype>
+      </xenotypeChances>
+    </xenotypeSet>	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseLeoPawnKind">
+    <defName>LeoTribalPawn</defName>
+    <label>member</label>
+    <race>YanzihkoLeo</race>
+    <defaultFactionType>PlayerLeoTribal</defaultFactionType>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>200~1200</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BaseLeoPawnKind">
+    <defName>LeoIndustrialPawn</defName>
+    <label>member</label>
+    <race>YanzihkoLeo</race>
+    <defaultFactionType>PlayerLeoIndustrial</defaultFactionType>
+    <apparelTags>
+      <li>Industrial</li>
+    </apparelTags>
+    <apparelMoney>200~2000</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

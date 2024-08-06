@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef ParentName="FactionBase" Abstract="True" Name="TigrisFactionBase">
+    <settlementTexturePath>World/WorldObjects/TigrisBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.95,0.64,0.38)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+	<!--TRIBAL FACTION-->
+  <FactionDef ParentName="TigrisFactionBase">
+    <defName>PlayerTigrisTribal</defName>
+    <label>Tigris Tribe</label>
+    <description>Tigris tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Tigris</pawnSingular>
+    <pawnsPlural>Tigris</pawnsPlural>
+    <basicMemberKind>TigrisTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Tigris_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Tigris_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--TRIBAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="TigrisFactionBase">
+    <defName>PlayerTigrisTribalNoTech</defName>
+    <label>Tigris Tribe (No tech)</label>
+    <description>Tigris tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Tigris</pawnSingular>
+    <pawnsPlural>Tigris</pawnsPlural>
+    <basicMemberKind>TigrisTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Tigris_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Tigris_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION-->
+	<FactionDef ParentName="TigrisFactionBase">
+    <defName>PlayerTigrisIndustrial</defName>
+    <label>Tigris Colony</label>
+    <description>Tigris Colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Tigris</pawnSingular>
+    <pawnsPlural>Tigris</pawnsPlural>
+    <basicMemberKind>TigrisIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Tigris_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Tigris_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="TigrisFactionBase">
+    <defName>PlayerTigrisIndustrialNoTech</defName>
+    <label>Tigris Colony (No tech)</label>
+    <description>Tigris colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Tigris</pawnSingular>
+    <pawnsPlural>Tigris</pawnsPlural>
+    <basicMemberKind>TigrisIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Tigris_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Tigris_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>				
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+</Defs>

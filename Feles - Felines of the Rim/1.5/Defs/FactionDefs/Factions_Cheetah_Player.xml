@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef ParentName="FactionBase" Abstract="True" Name="CheetahFactionBase">
+    <settlementTexturePath>World/WorldObjects/CheetahBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.95,0.64,0.38)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+	<!--TRIBAL FACTION-->
+  <FactionDef ParentName="CheetahFactionBase">
+    <defName>PlayerCheetahTribal</defName>
+    <label>Cheetah Tribe</label>
+    <description>Cheetah tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Cheetah</pawnSingular>
+    <pawnsPlural>Cheetah</pawnsPlural>
+    <basicMemberKind>CheetahTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Cheetah_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Cheetah_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--TRIBAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="CheetahFactionBase">
+    <defName>PlayerCheetahTribalNoTech</defName>
+    <label>Cheetah Tribe (No tech)</label>
+    <description>Cheetah tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Cheetah</pawnSingular>
+    <pawnsPlural>Cheetah</pawnsPlural>
+    <basicMemberKind>CheetahTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Cheetah_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Cheetah_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION-->
+	<FactionDef ParentName="CheetahFactionBase">
+    <defName>PlayerCheetahIndustrial</defName>
+    <label>Cheetah Colony</label>
+    <description>Cheetah Colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Cheetah</pawnSingular>
+    <pawnsPlural>Cheetah</pawnsPlural>
+    <basicMemberKind>CheetahIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Cheetah_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Cheetah_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="CheetahFactionBase">
+    <defName>PlayerCheetahIndustrialNoTech</defName>
+    <label>Cheetah Colony (No tech)</label>
+    <description>Cheetah colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Cheetah</pawnSingular>
+    <pawnsPlural>Cheetah</pawnsPlural>
+    <basicMemberKind>CheetahIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Cheetah_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Cheetah_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>				
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+</Defs>

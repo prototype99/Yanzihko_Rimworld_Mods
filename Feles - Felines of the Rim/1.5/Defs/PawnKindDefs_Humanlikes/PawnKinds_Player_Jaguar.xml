@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseJaguarPawnKind">
+    <race>YanzihkoJaguar</race>
+	<backstoryFiltersOverride>
+        <li>
+            <categories>
+                <li>000_G_GenIndustries_BackstoriesChildhood</li>
+				<li>000_G_GenIndustries_BackstoriesAdulthood</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    <combatPower>30</combatPower>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<xenotypeSet>
+      <xenotypeChances>
+        <YZRCM_JaguarXenotype MayRequire="Ludeon.RimWorld.Biotech">1</YZRCM_JaguarXenotype>
+      </xenotypeChances>
+    </xenotypeSet>	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseJaguarPawnKind">
+    <defName>JaguarTribalPawn</defName>
+    <label>member</label>
+    <race>YanzihkoJaguar</race>
+    <defaultFactionType>PlayerJaguarTribal</defaultFactionType>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>200~1200</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BaseJaguarPawnKind">
+    <defName>JaguarIndustrialPawn</defName>
+    <label>member</label>
+    <race>YanzihkoJaguar</race>
+    <defaultFactionType>PlayerJaguarIndustrial</defaultFactionType>
+    <apparelTags>
+      <li>Industrial</li>
+    </apparelTags>
+    <apparelMoney>200~2000</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

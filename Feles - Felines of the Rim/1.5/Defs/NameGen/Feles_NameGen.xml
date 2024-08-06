@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<RulePackDef>
+        <defName>FelesNameM</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[FirstM] '[SecondM]' [Ident]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>FirstM</keyword>
+                    <path>FelesNames/FelesMaleFirstName</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>SecondM</keyword>
+                    <path>FelesNames/FelesMaleMidName</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Ident</keyword>
+                    <path>FelesNames/FelesSurName</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+    
+        <RulePackDef>
+        <defName>FelesNameF</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[FirstF] '[SecondF]' [Ident]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>FirstF</keyword>
+                    <path>FelesNames/FelesFemaleFirstName</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>SecondF</keyword>
+                    <path>FelesNames/FelesFemaleMidName</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Ident</keyword>
+                    <path>FelesNames/FelesSurName</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+</Defs>

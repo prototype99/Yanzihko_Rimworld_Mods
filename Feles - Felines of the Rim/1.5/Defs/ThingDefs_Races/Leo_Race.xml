@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="BaseLeo"> 
+		<defName>YanzihkoLeo</defName>
+		<label>Leo</label>
+		<description>Feles is a group of genetically-engineered species representing some of the most popular feline species from planet Earth. Leo, unlike other Felines, are very social beings and feel themselves confident in all kinds of discussions. Leo is an advanced variation of xenohumans with a precisely tuned genome that becomes highly unstable outside of very short range of acceptable parameters. Technically they even can be considered an alien species. Their modification is impossible outside of advanced Glitterworld facilities and without source Genome templates.</description>
+<!--■■■■■■■■■■■■■■■■■■■■ Bio Stats ■■■■■■■■■■■■■■■■■■■■-->
+		<statBases>
+			<PawnBeauty>1.25</PawnBeauty>
+			<CarryingCapacity>60</CarryingCapacity>
+			<PainShockThreshold>0.9</PainShockThreshold>
+			<MarketValue>2500</MarketValue>
+			<MoveSpeed>5.5</MoveSpeed>
+			<Mass>50</Mass>
+			<ImmunityGainSpeed>1</ImmunityGainSpeed>
+			<ComfyTemperatureMin>20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>36</ComfyTemperatureMax>
+			<LeatherAmount>60</LeatherAmount>
+			<MeatAmount>100</MeatAmount>
+<!--■■■■■■■■■■■■■■■■■■■■ Skills ■■■■■■■■■■■■■■■■■■■■-->
+			<ResearchSpeed>1.1</ResearchSpeed>
+			<GlobalLearningFactor>1.1</GlobalLearningFactor>
+			<MiningSpeed>1</MiningSpeed>
+			<SocialImpact>1.25</SocialImpact>
+			<ConstructionSpeed>1</ConstructionSpeed>
+			<AnimalGatherSpeed>1.1</AnimalGatherSpeed>
+			<AnimalGatherYield>1.1</AnimalGatherYield>
+			<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+		</statBases>
+<!--■■■■■■■■■■■■■■■■■■■■ Race ■■■■■■■■■■■■■■■■■■■■-->
+		<race>
+			<renderTree>Humanlike</renderTree>
+			<fleshType>Feline</fleshType>
+			<leatherDef>Leo_leather</leatherDef>
+			<body>Feles</body>
+			<baseBodySize>0.8</baseBodySize>
+			<baseHealthScale>0.9</baseHealthScale>
+			<baseHungerRate>1</baseHungerRate>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>100</lifeExpectancy>
+			<useMeatFrom>Human</useMeatFrom>
+			<nameCategory>HumanStandard</nameCategory>
+			<!--Name Gen-->
+			<nameGenerator>FelesNameM</nameGenerator>
+			<nameGeneratorFemale>FelesNameF</nameGeneratorFemale> 
+			<!--End of Name Gen-->
+			<hasGenders>true</hasGenders>
+			<foodType>OmnivoreHuman</foodType>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+			</hediffGiverSets>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+		<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>9</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>13</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+						<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+			<ageGenerationCurve>
+				<points>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+					<li>(14,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+					<li>(16,100)</li>
+					<li>(50,100)</li>
+					<li>(60,30)</li>
+					<li>(70,18)</li>
+					<li>(80,10)</li>
+					<li>(90,3)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+		</race>
+		<recipes>
+			<li>ExciseCarcinoma</li>
+			<li>AdministerMechSerumHealer</li>
+			<li>RemoveBodyPart</li>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+			<li>CureScaria</li>
+			<!--ROYALITY-->
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+			<!--BIOTECH-->
+			<li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+		</recipes>
+<!--■■■■■■■■■■■■■■■■■■■■ Tools (attack) ■■■■■■■■■■■■■■■■■■■■-->
+		<tools>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>25</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>25</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+
+		<alienRace>
+			<generalSettings>
+				<humanRecipeImport>true</humanRecipeImport>
+				<maleGenderProbability>0.4</maleGenderProbability>
+				<immuneToAge>true</immuneToAge>
+<!--■■■■■■■■■■■■■■■■■■■■ Disabled traits ■■■■■■■■■■■■■■■■■■■■-->
+				<disallowedTraits>
+					<li><defName>Pyromaniac</defName></li>
+					<li><defName>Bloodlust</defName></li>
+					<li><defName>Nudist</defName></li>
+					<li><defName>Psychopath</defName></li>
+					<li><defName>Cannibal</defName></li>
+					<li><defName>AnnoyingVoice</defName></li>
+					<li><defName>CreepyBreathing</defName></li>
+					<li><defName>DislikesWomen</defName></li>
+					<li><defName>DislikesMen</defName></li>
+					<li><defName>Greedy</defName></li>
+					<li><defName>Masochist</defName></li>
+					<li><defName>Jealous</defName></li>
+					<li><defName>Abrasive</defName></li>
+					<li><defName>DrugDesire</defName></li>
+				</disallowedTraits>
+<!--■■■■■■■■■■■■■■■■■■■■ Forced traits ■■■■■■■■■■■■■■■■■■■■-->
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>FFR_Leo</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName Degree="1">NaturalMood</defName>
+						<chance>50</chance>
+					</li>
+					<li>
+						<defName Degree="2">NaturalMood</defName>
+						<chance>25</chance>
+					</li>
+					<li>
+						<defName Degree="1">Beauty</defName>
+						<chance>50</chance>
+					</li>
+					<li>
+						<defName Degree="2">Beauty</defName>
+						<chance>25</chance>
+					</li>
+					<li>
+						<defName>Kind</defName>
+						<chance>15</chance>
+					</li>
+				</forcedRaceTraitEntries>
+<!--■■■■■■■■■■■■■■■■■■■■ Body addons/colorgen ■■■■■■■■■■■■■■■■■■■■-->
+				<alienPartGenerator>
+				<customDrawSize>(0.8, 0.8)</customDrawSize>
+				<customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize>
+					<headTypes Inherit="False">
+						<li>Male_AverageNormal</li>
+						<li>Female_AverageNormal</li>
+					</headTypes>
+					<headOffsetDirectional>
+								<south>
+									<bodyTypes>
+										<Thin>(0.0,-0.1)</Thin>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Thin>(0.0,-0.1)</Thin>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Thin>(-0.02,-0.1)</Thin>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+									<bodyTypes>
+										<Thin>(0.02,-0.1)</Thin>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+					</headOffsetDirectional>
+					<!--Body Type-->
+					<bodyTypes>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+						<li>Thin</li>
+						<li>Male</li>
+						<li>Female</li>
+					</bodyTypes>
+					<!--Ass long list of body addons below-->
+					<!--Don't you fucking dare to touch anything here, it's like a fragile pie.-->
+					<bodyAddons>
+						<!--MANE (EXCLUSIVE GOTY GOLDEN LIMITED EDITION FOR LION MALES ONLY)-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Mane/Mane</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+							<layerOffset>0.191</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+							<layerOffset>0.34</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Head</bodyPart>
+								</BodyPart>
+								<Gender>Male</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--HAIR FRONT (HAIRS ARE ONLY FOR LION FEMALES)--> 
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Hairfront/Var</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+							<layerOffset>-0.35</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Head</bodyPart>
+								</BodyPart>
+								<Gender>Female</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--NORTH FIX FOR HAIR FRONT-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Hairfrontnorthfix/Var</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+							<layerOffset>0.3</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+							<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Head</bodyPart>
+								</BodyPart>
+								<Gender>Female</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--HAIR BACK-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Hairback/Var</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+							<layerOffset>0.191</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+							<layerOffset>0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+							<layerOffset>-0.31</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+							<layerOffset>-0.31</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Head</bodyPart>
+								</BodyPart>
+								<Gender>Female</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--TAIL-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Tail/Defaulttail</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<!--<defaultOffset>Tail</defaultOffset>-->
+							<offsets>
+								<south>
+								<layerOffset>0.195</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0.05)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0.05)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+								<layerOffset>0.34</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0.02)</Male>
+										<Female>(0,0.05)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0.05)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0.05)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+								<layerOffset>0</layerOffset>
+									<bodyTypes>
+										<Thin>(-0.05,0)</Thin>
+										<Male>(-0.07,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.07,0.05)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.07,0.05)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart><bodyPart>Yanz_Base_Tail</bodyPart></BodyPart>
+								<Apparel><hiddenUnderApparelFor><li>Yanz_Tail</li></hiddenUnderApparelFor></Apparel>
+								<Posture>
+									<drawnStanding>true</drawnStanding>
+  									<drawnLaying>true</drawnLaying>
+  									<drawnInBed>false</drawnInBed>
+								</Posture>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--NOSE-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Nose/Defaultnose</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+								<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+								<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+								<layerOffset>-0.3245</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart><bodyPart>Nose</bodyPart></BodyPart>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--LEFT EYE MALE-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Eye/Male/lefteye</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Eye</bodyPart>
+									<bodyPartLabel>left eye</bodyPartLabel>
+								</BodyPart>
+								<Gender>Male</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--LEFT EYE FEMALE-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Eye/Female/lefteye</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Eye</bodyPart>
+									<bodyPartLabel>left eye</bodyPartLabel>
+								</BodyPart>
+								<Gender>Female</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--RIGHT EYE MALE-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Eye/Male/righteye</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Eye</bodyPart>
+									<bodyPartLabel>right eye</bodyPartLabel>
+								</BodyPart>
+								<Gender>Male</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+						<!--RIGHT EYE FEMALE-->
+						<li>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Eye/Female/righteye</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>-0.325</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Eye</bodyPart>
+									<bodyPartLabel>right eye</bodyPartLabel>
+								</BodyPart>
+								<Gender>Female</Gender>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+
+						<!--LEFT EAR-->
+						<li>
+							<shaderType>Transparent</shaderType>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Ear/leftear</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>0.19</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>-0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+									<layerOffset>0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Ear</bodyPart>
+									<bodyPartLabel>left ear</bodyPartLabel>
+								</BodyPart>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+
+						<!--RIGHT EAR-->
+						<li>
+							<shaderType>Transparent</shaderType>
+							<drawSize>1</drawSize>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<path>Leo/Ear/rightear</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<alignWithHead>true</alignWithHead>
+							<offsets>
+								<south>
+									<layerOffset>0.19</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>0.33</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</east>
+								<west>
+									<layerOffset>-0.35</layerOffset>
+									<bodyTypes>
+										<Thin>(0,0)</Thin>
+										<Male>(0,0)</Male>
+										<Female>(0,0)</Female>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Baby>
+									</bodyTypes>
+								</west>
+							</offsets>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Ear</bodyPart>
+									<bodyPartLabel>right ear</bodyPartLabel>
+								</BodyPart>
+								<RotStage>Fresh,Rotting</RotStage>
+    						</conditions>
+						</li>
+
+					</bodyAddons>
+					<!--HAIR COLOR-->
+					<colorChannels>
+						<li>
+							<name>hair</name>
+							<first Class="AlienRace.ColorGenerator_CustomAlienChannel">
+								<colorChannel>skin_1</colorChannel>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(0.500, 1.000, 0.000, 1.000)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+
+						<!--FUR COLOR-->
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!--Lion Orange-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(255,195,137,255)</only>
+									</li>
+									<!--Sepia-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(255,211,179,255)</only>
+									</li>
+									<!--Skin-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(253,219,186,255)</only>
+									</li>
+								</options>
+							</first>
+							<!--EYE COLOR-->
+							<second Class="ColorGenerator_Options">
+								<options>
+									<!--Aquamarine-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(127,255,212,255)</only>
+									</li>
+									<!--Pink-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(255,50,153,255)</only>
+									</li>
+									<!--Green (Jade)-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(0,177,106,255)</only>
+									</li>
+									<!--Brown (Metro)-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(130,90,44,255)</only>
+									</li>
+									<!--Ocean Blue-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(0,119,190,255)</only>
+									</li>
+									<!--Soft Red-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(203,56,56,255)</only>
+									</li>
+									<!--Golden Jojo-->
+									<li>
+										<weight>1</weight>
+										<only>RGBA(255,215,0,255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+
+				</alienPartGenerator>
+			</generalSettings>
+
+			<graphicPaths>
+				<body>
+				<path>Leo/Body/</path>
+				<extendedGraphics>
+						<Gender For="Male">
+							<extendedGraphics>
+							<BodyType For="Male">Leo/Body/Naked_Male</BodyType>
+							<BodyType For="Thin">Leo/Body/Naked_Thin</BodyType>
+							<BodyType MayRequire="Ludeon.RimWorld.Biotech" For="Child">Leo/Body/Naked_Child</BodyType>
+							<BodyType MayRequire="Ludeon.RimWorld.Biotech" For="Baby">Leo/Body/Naked_Child</BodyType>
+							</extendedGraphics>
+						</Gender>
+						<Gender For="Female">
+							<extendedGraphics>
+							<BodyType For="Female">Leo/Body/Naked_Female</BodyType>
+							<BodyType For="Thin">Leo/Body/Naked_Thin</BodyType>
+							<BodyType MayRequire="Ludeon.RimWorld.Biotech" For="Child">Leo/Body/Naked_Child</BodyType>
+							<BodyType MayRequire="Ludeon.RimWorld.Biotech" For="Baby">Leo/Body/Naked_Child</BodyType>
+							</extendedGraphics>
+						</Gender>
+				</extendedGraphics>
+				</body>
+				<head>Leo/Head/</head>
+			</graphicPaths>
+			<styleSettings>
+		        <li>
+                    <key>BeardDef</key>
+                    <value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+				<li>
+				<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<!--Food thoughts (Leo cannot recieve bufs and debufs from eating human meat and bad food in general)-->
+					<li>AteWithoutTable</li>
+					<li>AteRawFood</li>
+					<li>AteKibble</li>
+					<li>AteCorpse</li>
+					<li>AteHumanlikeMeatDirect</li>
+					<li>AteHumanlikeMeatAsIngredient</li>
+					<li>AteInsectMeatDirect</li>
+					<li>AteInsectMeatAsIngredient</li>
+					<!-- Other thoughts -->
+					<li>SleptOnGround</li>
+					<li>NeedOutdoors</li>
+					<li>SharedBed</li>
+					<li>Naked</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			
+			<raceRestriction>
+			<!--<onlyHaveRaceRestrictedGenes>false</onlyHaveRaceRestrictedGenes>-->
+				<blackGeneList >
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">FacialRidges</li>
+                </blackGeneList>
+               <blackGeneTags>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">SkinColor</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">HairColor</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">EyeColor</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Nose</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Jaw</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Head</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Headbone</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">HairStyle</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">BeardStyle</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">SkinColorOverride</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Fur</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Tail</li>
+                </blackGeneTags>
+                <blackEndoCategories>
+                    <li>Melanin</li>
+                    <li>HairColor</li>
+                    <li>Ears</li>
+                    <li>Nose</li>
+                    <li>Jaw</li>
+                    <li>Head</li>
+                    <li>BodyType</li>
+                </blackEndoCategories>
+				<whiteGeneList>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Genetical_Industries_BasicGene</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">YZRCM_Gene_Leo</li>
+				</whiteGeneList>
+				<recipeList>
+				</recipeList>
+				<!--XENOTYPES-->
+				<onlyUseRaceRestrictedXenotypes MayRequire="Ludeon.RimWorld.Biotech">true</onlyUseRaceRestrictedXenotypes>
+				<!--<whiteXenotypeList>
+				</whiteXenotypeList>-->
+				<xenotypeList MayRequire="Ludeon.RimWorld.Biotech">
+					<li>YZRCM_LeoXenotype</li>
+				</xenotypeList>
+			</raceRestriction>
+
+			<relationSettings>
+			</relationSettings>
+
+		</alienRace>
+
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

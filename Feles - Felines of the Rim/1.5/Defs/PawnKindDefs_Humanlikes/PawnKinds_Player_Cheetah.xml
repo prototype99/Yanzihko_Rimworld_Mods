@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseCheetahPawnKind">
+    <race>YanzihkoCheetah</race>
+	<backstoryFiltersOverride>
+        <li>
+            <categories>
+                <li>000_G_GenIndustries_BackstoriesChildhood</li>
+				<li>000_G_GenIndustries_BackstoriesAdulthood</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    <combatPower>30</combatPower>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<xenotypeSet>
+      <xenotypeChances>
+        <YZRCM_CheetahXenotype MayRequire="Ludeon.RimWorld.Biotech">1</YZRCM_CheetahXenotype>
+      </xenotypeChances>
+    </xenotypeSet>		  
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseCheetahPawnKind">
+    <defName>CheetahTribalPawn</defName>
+    <label>member</label>
+    <race>YanzihkoCheetah</race>
+    <defaultFactionType>PlayerCheetahTribal</defaultFactionType>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>200~1200</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BaseCheetahPawnKind">
+    <defName>CheetahIndustrialPawn</defName>
+    <label>member</label>
+    <race>YanzihkoCheetah</race>
+    <defaultFactionType>PlayerCheetahIndustrial</defaultFactionType>
+    <apparelTags>
+      <li>Industrial</li>
+    </apparelTags>
+    <apparelMoney>200~2000</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>2~5</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

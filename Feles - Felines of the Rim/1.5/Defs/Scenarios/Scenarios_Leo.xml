@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ScenarioDef>
+	<defName>LeoScenario1</defName>
+	<label>Lion Kind</label>
+	<description>Lying under the sun, surrounded by your pride. Your a newborn cub, future king of the Sahara. In the night, poachers arrive. Your father sacrifices himself, so you can make your escape. All alone now, will you rise as a king, or fall...</description>
+	<scenario>
+		<summary>Lying under the sun, surrounded by your pride. Your a newborn cub, future king of the Sahara. In the night, poachers arrive. Your father sacrifices himself, so you can make your escape. All alone now, will you rise as a king, or fall...</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerLeoTribalNoTech</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>1</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<!-- Player starting stuff spawn method-->
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>There's no time for any regrets or thoughts. For now my only goal is survival...</text>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+
+</Defs>

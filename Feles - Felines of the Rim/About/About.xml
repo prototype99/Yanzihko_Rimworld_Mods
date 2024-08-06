@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<name>Feles - Felines of the Rim [1.5]</name>
+<author>Yanzihko</author>
+<packageId>yanzihko.FFR</packageId>
+<supportedVersions>
+		<li>1.5</li>
+</supportedVersions>
+<modIconPath IgnoreIfNoMatchingField="True">UI/Minimodfeles</modIconPath>
+<description>
+	
+Feles is a group of genetically-engineered species representing some of the most popular feline species from planet earth. They were popular at a couple of glitterworlds in central systems as servants and entertainers, so popular, that some traders and travelers took them into long interstellar adventures in cryptosleep, thus spreading them far beyond their home system. After centuries it's still possible to find these creatures even at rimworlds.
+
+Support me at Boosty: https://boosty.to/yanzihko
+</description>
+	<modDependencies>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races 2.0</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>yanzihko.YZRCM</packageId>
+			<displayName>Yanzihko's Races - Core Module [YZRCM][1.5]</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3005787388</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef ParentName="FactionBase" Abstract="True" Name="LeoFactionBase">
+    <settlementTexturePath>World/WorldObjects/LeoBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.95,0.64,0.38)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+	<!--TRIBAL FACTION-->
+  <FactionDef ParentName="LeoFactionBase">
+    <defName>PlayerLeoTribal</defName>
+    <label>Leo Tribe</label>
+    <description>Leo tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Leo</pawnSingular>
+    <pawnsPlural>Leo</pawnsPlural>
+    <basicMemberKind>LeoTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Leo_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Leo_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--TRIBAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="LeoFactionBase">
+    <defName>PlayerLeoTribalNoTech</defName>
+    <label>Leo Tribe (No tech)</label>
+    <description>Leo tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Leo</pawnSingular>
+    <pawnsPlural>Leo</pawnsPlural>
+    <basicMemberKind>LeoTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Leo_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Leo_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION-->
+	<FactionDef ParentName="LeoFactionBase">
+    <defName>PlayerLeoIndustrial</defName>
+    <label>Leo Colony</label>
+    <description>Leo Colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Leo</pawnSingular>
+    <pawnsPlural>Leo</pawnsPlural>
+    <basicMemberKind>LeoIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Leo_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Leo_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="LeoFactionBase">
+    <defName>PlayerLeoIndustrialNoTech</defName>
+    <label>Leo Colony (No tech)</label>
+    <description>Leo colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Leo</pawnSingular>
+    <pawnsPlural>Leo</pawnsPlural>
+    <basicMemberKind>LeoIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Leo_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Leo_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>				
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+</Defs>

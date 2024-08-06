@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef ParentName="FactionBase" Abstract="True" Name="JaguarFactionBase">
+    <settlementTexturePath>World/WorldObjects/JaguarBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.95,0.64,0.38)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+	<!--TRIBAL FACTION-->
+  <FactionDef ParentName="JaguarFactionBase">
+    <defName>PlayerJaguarTribal</defName>
+    <label>Jaguar Tribe</label>
+    <description>Jaguar tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Jaguar</pawnSingular>
+    <pawnsPlural>Jaguar</pawnsPlural>
+    <basicMemberKind>JaguarTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Jaguar_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Jaguar_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--TRIBAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="JaguarFactionBase">
+    <defName>PlayerJaguarTribalNoTech</defName>
+    <label>Jaguar Tribe (No tech)</label>
+    <description>Jaguar tribe</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Jaguar</pawnSingular>
+    <pawnsPlural>Jaguar</pawnsPlural>
+    <basicMemberKind>JaguarTribalPawn</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Jaguar_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Jaguar_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION-->
+	<FactionDef ParentName="JaguarFactionBase">
+    <defName>PlayerJaguarIndustrial</defName>
+    <label>Jaguar Colony</label>
+    <description>Jaguar Colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Jaguar</pawnSingular>
+    <pawnsPlural>Jaguar</pawnsPlural>
+    <basicMemberKind>JaguarIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Jaguar_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Jaguar_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+	
+	<!--INDUSTRIAL FACTION (NO TECH AT START)-->
+	<FactionDef ParentName="JaguarFactionBase">
+    <defName>PlayerJaguarIndustrialNoTech</defName>
+    <label>Jaguar Colony (No tech)</label>
+    <description>Jaguar colony</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>Jaguar</pawnSingular>
+    <pawnsPlural>Jaguar</pawnsPlural>
+    <basicMemberKind>JaguarIndustrialPawn</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Jaguar_Faction</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/Jaguar_Base</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <apparelStuffFilter>
+      <thingDefs>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>				
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    </FactionDef>
+</Defs>

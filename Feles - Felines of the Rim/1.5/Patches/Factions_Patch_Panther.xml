@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- These patches adds Panther PawnKinds to all base game encounters, 
+	 with 20% of the weighting of the equivalent Human PawnKinds -->
+
+<Patch>
+	<!-- Pirates -->
+	<!-- Pirate raid 1; 100 commonality, ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Panther_Drifter>2</Panther_Drifter>
+		<Panther_Thrasher>0.6</Panther_Thrasher>
+        <Panther_Scavenger>2</Panther_Scavenger>
+        <Panther_Pirate>2</Panther_Pirate>
+        <Panther_Grenadier_EMP>0.1</Panther_Grenadier_EMP>
+        <Panther_Grenadier_Destructive>0.4</Panther_Grenadier_Destructive>
+        <Panther_Mercenary_Gunner>2</Panther_Mercenary_Gunner>
+        <Panther_Mercenary_Heavy>1.2</Panther_Mercenary_Heavy>
+        <Panther_Mercenary_Slasher>0.6</Panther_Mercenary_Slasher>
+        <Panther_Mercenary_Sniper>1.4</Panther_Mercenary_Sniper>
+        <Panther_Mercenary_Elite>2</Panther_Mercenary_Elite>
+        <Panther_PirateBoss>1</Panther_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 2; 30 commonality, melee only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Panther_Thrasher>2</Panther_Thrasher>
+        <Panther_Mercenary_Slasher>2</Panther_Mercenary_Slasher>
+        <Panther_PirateBoss>1</Panther_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 3; 20 commonality, ranged only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+	<value>
+		<Panther_Scavenger>2.0</Panther_Scavenger>
+		<Panther_Pirate>2.0</Panther_Pirate>
+		<Panther_Grenadier_EMP>0.05</Panther_Grenadier_EMP>
+		<Panther_Grenadier_Smoke>0.05</Panther_Grenadier_Smoke>
+		<Panther_Grenadier_Destructive>0.4</Panther_Grenadier_Destructive>
+		<Panther_Mercenary_Gunner>2.0</Panther_Mercenary_Gunner>
+		<Panther_Mercenary_Heavy>1.2</Panther_Mercenary_Heavy>
+		<Panther_Mercenary_Sniper>1.4</Panther_Mercenary_Sniper>
+		<Panther_Mercenary_Elite>2.0</Panther_Mercenary_Elite>
+		<Panther_PirateBoss>1.0</Panther_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 4; 15 commonality, explosives with ranged mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[4]/options</xpath>
+	<value>
+        <Panther_Grenadier_EMP>0.2</Panther_Grenadier_EMP>
+        <Panther_Grenadier_Destructive>2</Panther_Grenadier_Destructive>
+        <Panther_Mercenary_Gunner>0.2</Panther_Mercenary_Gunner>
+        <Panther_Mercenary_Heavy>2</Panther_Mercenary_Heavy>
+        <Panther_Mercenary_Elite>0.2</Panther_Mercenary_Elite>
+        <Panther_PirateBoss>0.2</Panther_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 5; 10 commonality, snipers only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[5]/options</xpath>
+	<value>
+        <Panther_Mercenary_Sniper>2</Panther_Mercenary_Sniper>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 6; 2.5 commonality, drifters only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[6]/options</xpath>
+	<value>
+        <Panther_Drifter>2</Panther_Drifter>
+	</value>
+	</Operation>
+
+	<!-- Pirate Settlement; mainly ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[7]/options</xpath>
+	<value>
+        <Panther_Thrasher>0.6</Panther_Thrasher>
+        <Panther_Pirate>2</Panther_Pirate>
+        <Panther_Grenadier_Destructive>0.4</Panther_Grenadier_Destructive>
+		<Panther_Mercenary_Slasher>0.6</Panther_Mercenary_Slasher>
+		<Panther_Mercenary_Sniper>2</Panther_Mercenary_Sniper>
+		<Panther_Mercenary_Gunner>2</Panther_Mercenary_Gunner>
+		<Panther_Mercenary_Elite>2</Panther_Mercenary_Elite>
+        <Panther_PirateBoss>2</Panther_PirateBoss>
+	</value>
+	</Operation>
+	
+	<!-- Outlander -->
+	<!-- Outlander Raid; standard mix -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Panther_Villager>1</Panther_Villager>
+        <Panther_Town_Guard>2</Panther_Town_Guard>
+        <Panther_Grenadier_Destructive>0.3</Panther_Grenadier_Destructive>
+		<Panther_Mercenary_Slasher>1.4</Panther_Mercenary_Slasher>
+		<Panther_Mercenary_Gunner>2</Panther_Mercenary_Gunner>
+		<Panther_Mercenary_Elite>2</Panther_Mercenary_Elite>
+        <Panther_Town_Councilman>2</Panther_Town_Councilman>
+	</value>
+	</Operation>
+	
+	<!-- Outlander Peaceful -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Panther_Villager>4</Panther_Villager>
+        <Panther_Town_Guard>2</Panther_Town_Guard>
+        <Panther_Town_Councilman>2</Panther_Town_Councilman>
+	</value>
+	</Operation>
+
+	<!-- Outlander Traders -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+	<value>
+        <Panther_Villager>0.6</Panther_Villager>
+        <Panther_Town_Guard>2</Panther_Town_Guard>
+        <Panther_Grenadier_Destructive>0.3</Panther_Grenadier_Destructive>
+        <Panther_Mercenary_Slasher>1.4</Panther_Mercenary_Slasher>
+        <Panther_Mercenary_Gunner>2</Panther_Mercenary_Gunner>
+		<Panther_Mercenary_Elite>2</Panther_Mercenary_Elite>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/traders</xpath>
+	<value>
+        <Panther_Town_Trader>0.2</Panther_Town_Trader>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+	<value>
+		<Panther_Villager>2</Panther_Villager>
+        <Panther_Town_Guard>2</Panther_Town_Guard>
+        <Panther_Grenadier_Destructive>0.3</Panther_Grenadier_Destructive>
+		<Panther_Mercenary_Slasher>1.4</Panther_Mercenary_Slasher>
+        <Panther_Mercenary_Gunner>2</Panther_Mercenary_Gunner>
+        <Panther_Mercenary_Elite>2</Panther_Mercenary_Elite>
+        <Panther_Town_Councilman>2</Panther_Town_Councilman>
+	</value>
+	</Operation>
+
+	<!-- Villager -->
+	<!-- Villager Raid 1; 100 commonality, ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Panther_Tribal_Penitent>1</Panther_Tribal_Penitent>
+        <Panther_Tribal_Warrior>1</Panther_Tribal_Warrior>
+        <Panther_Tribal_Archer>2</Panther_Tribal_Archer>
+        <Panther_Tribal_Hunter>2</Panther_Tribal_Hunter>
+        <Panther_Tribal_HeavyArcher>2</Panther_Tribal_HeavyArcher>
+        <Panther_Tribal_Berserker>1</Panther_Tribal_Berserker>
+        <Panther_Tribal_ChiefRanged>0.6</Panther_Tribal_ChiefRanged>
+        <Panther_Tribal_ChiefMelee>0.3</Panther_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Raid 2; 60 commonality, ranged only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Panther_Tribal_Archer>2</Panther_Tribal_Archer>
+        <Panther_Tribal_Hunter>2</Panther_Tribal_Hunter>
+        <Panther_Tribal_HeavyArcher>2</Panther_Tribal_HeavyArcher>
+        <Panther_Tribal_ChiefRanged>1</Panther_Tribal_ChiefRanged>
+	</value>
+	</Operation>
+
+	<!-- Villager Raid 3; 60 commonality, melee only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+	<value>
+        <Panther_Tribal_Penitent>2</Panther_Tribal_Penitent>
+        <Panther_Tribal_Warrior>2</Panther_Tribal_Warrior>
+        <Panther_Tribal_Berserker>2</Panther_Tribal_Berserker>
+        <Panther_Tribal_ChiefMelee>1</Panther_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Peaceful -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[5]/options</xpath>
+	<value>
+        <Panther_Tribal_Warrior>4</Panther_Tribal_Warrior>
+        <Panther_Tribal_Archer>2</Panther_Tribal_Archer>
+        <Panther_Tribal_Hunter>2</Panther_Tribal_Hunter>
+        <Panther_Tribal_HeavyArcher>2</Panther_Tribal_HeavyArcher>
+        <Panther_Tribal_Berserker>1</Panther_Tribal_Berserker>
+        <Panther_Tribal_ChiefRanged>0.6</Panther_Tribal_ChiefRanged>
+        <Panther_Tribal_ChiefMelee>0.3</Panther_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Traders -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/guards</xpath>
+	<value>
+        <Panther_Tribal_Warrior>1.4</Panther_Tribal_Warrior>
+        <Panther_Tribal_Archer>2</Panther_Tribal_Archer>
+        <Panther_Tribal_Hunter>2</Panther_Tribal_Hunter>
+        <Panther_Tribal_HeavyArcher>2</Panther_Tribal_HeavyArcher>
+        <Panther_Tribal_Berserker>1.4</Panther_Tribal_Berserker>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/traders</xpath>
+	<value>
+        <Panther_Tribal_Trader>0.2</Panther_Tribal_Trader>
+	</value>
+	</Operation>
+
+	<!-- Settlement -->
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[7]/options</xpath>
+	<value>
+          <Panther_Tribal_Warrior>1.4</Panther_Tribal_Warrior>
+          <Panther_Tribal_Archer>2</Panther_Tribal_Archer>
+          <Panther_Tribal_Hunter>2</Panther_Tribal_Hunter>
+          <Panther_Tribal_HeavyArcher>2</Panther_Tribal_HeavyArcher>
+          <Panther_Tribal_Berserker>1.4</Panther_Tribal_Berserker>
+          <Panther_Tribal_ChiefRanged>2</Panther_Tribal_ChiefRanged>
+	</value>
+	</Operation>
+
+</Patch>

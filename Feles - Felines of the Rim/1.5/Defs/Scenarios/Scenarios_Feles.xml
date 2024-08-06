@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ScenarioDef>
+	<defName>FelesScenario1</defName>
+	<label>Purrfect Escape</label>
+	<description>Since your capture, you've felt nothing but defeat. Confined aboard this ship, since birth. Designed as a exotic pet. Forced to play house to a select elite. Bought and sold for the pleasure of others. One day you hear an explosion, sirens blare. You grab those closest and steal an escape pod. Anywhere is better, without chains and collars.</description>
+	<scenario>
+		<summary>Since your capture, you've felt nothing but defeat. Confined aboard this ship, since birth. Designed as a exotic pet. Forced to play house to a select elite. Bought and sold for the pleasure of others. One day you hear an explosion, sirens blare. You grab those closest and steal an escape pod. Anywhere is better, without chains and collars.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerFelesIndustrialNoTech</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>5</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>40</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineIndustrial</thingDef>
+				<count>10</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>ComponentIndustrial</thingDef>
+				<count>10</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Gun_Autopistol</thingDef>
+				<count>5</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>Steel</thingDef>
+				<count>500</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<count>6</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Freedom... A dream that finally became a reality. You happily smile at each other and laugh as your ship, your flying prison burns and falls apart over the horizon...</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+
+<ScenarioDef>
+	<defName>FelesScenario2</defName>
+	<label>The Cat is Out of the Bag</label>
+	<description>Your kind has been hunted. Put on display as dolls. Sold into slavery as pets. You've had enough. Across the lands, your brethen have decided to unite and fight. To build a new empire and spread your rule across this land. The cat is out of the bag.</description>
+	<scenario>
+		<summary>Your kind has been hunted. Put on display as dolls. Sold into slavery as pets. You've had enough. Across the lands, your brethen have decided to unite and fight. To build a new empire and spread your rule across this land. The cat is out of the bag.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerFelesTribalNoTech</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>3</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>200</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pemmican</thingDef>
+          <count>400</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Club</thingDef>
+          <stuff>WoodLog</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Ikwa</thingDef>
+          <stuff>Steel</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Knife</thingDef>
+          <stuff>Jade</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Bow_Short</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pila</thingDef>
+        </li>
+        <li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>3</count>
+          <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+        </li>
+
+        <!-- Scatter some things near player start -->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>500</count>
+        </li>
+
+		<li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Everything feels surreal. No one was sure that your escape plan would work. But here you are, standing completely free, even with some stolen supplies to survive for some time.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+
+</Defs>

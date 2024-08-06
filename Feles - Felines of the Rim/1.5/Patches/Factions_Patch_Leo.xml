@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- These patches adds Leo PawnKinds to all base game encounters, 
+	 with 20% of the weighting of the equivalent Human PawnKinds -->
+
+<Patch>
+	<!-- Pirates -->
+	<!-- Pirate raid 1; 100 commonality, ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Leo_Drifter>2</Leo_Drifter>
+		<Leo_Thrasher>0.6</Leo_Thrasher>
+        <Leo_Scavenger>2</Leo_Scavenger>
+        <Leo_Pirate>2</Leo_Pirate>
+        <Leo_Grenadier_EMP>0.1</Leo_Grenadier_EMP>
+        <Leo_Grenadier_Destructive>0.4</Leo_Grenadier_Destructive>
+        <Leo_Mercenary_Gunner>2</Leo_Mercenary_Gunner>
+        <Leo_Mercenary_Heavy>1.2</Leo_Mercenary_Heavy>
+        <Leo_Mercenary_Slasher>0.6</Leo_Mercenary_Slasher>
+        <Leo_Mercenary_Sniper>1.4</Leo_Mercenary_Sniper>
+        <Leo_Mercenary_Elite>2</Leo_Mercenary_Elite>
+        <Leo_PirateBoss>1</Leo_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 2; 30 commonality, melee only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Leo_Thrasher>2</Leo_Thrasher>
+        <Leo_Mercenary_Slasher>2</Leo_Mercenary_Slasher>
+        <Leo_PirateBoss>1</Leo_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 3; 20 commonality, ranged only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+	<value>
+		<Leo_Scavenger>2.0</Leo_Scavenger>
+		<Leo_Pirate>2.0</Leo_Pirate>
+		<Leo_Grenadier_EMP>0.05</Leo_Grenadier_EMP>
+		<Leo_Grenadier_Smoke>0.05</Leo_Grenadier_Smoke>
+		<Leo_Grenadier_Destructive>0.4</Leo_Grenadier_Destructive>
+		<Leo_Mercenary_Gunner>2.0</Leo_Mercenary_Gunner>
+		<Leo_Mercenary_Heavy>1.2</Leo_Mercenary_Heavy>
+		<Leo_Mercenary_Sniper>1.4</Leo_Mercenary_Sniper>
+		<Leo_Mercenary_Elite>2.0</Leo_Mercenary_Elite>
+		<Leo_PirateBoss>1.0</Leo_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 4; 15 commonality, explosives with ranged mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[4]/options</xpath>
+	<value>
+        <Leo_Grenadier_EMP>0.2</Leo_Grenadier_EMP>
+        <Leo_Grenadier_Destructive>2</Leo_Grenadier_Destructive>
+        <Leo_Mercenary_Gunner>0.2</Leo_Mercenary_Gunner>
+        <Leo_Mercenary_Heavy>2</Leo_Mercenary_Heavy>
+        <Leo_Mercenary_Elite>0.2</Leo_Mercenary_Elite>
+        <Leo_PirateBoss>0.2</Leo_PirateBoss>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 5; 10 commonality, snipers only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[5]/options</xpath>
+	<value>
+        <Leo_Mercenary_Sniper>2</Leo_Mercenary_Sniper>
+	</value>
+	</Operation>
+
+	<!-- Pirate raid 6; 2.5 commonality, drifters only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[6]/options</xpath>
+	<value>
+        <Leo_Drifter>2</Leo_Drifter>
+	</value>
+	</Operation>
+
+	<!-- Pirate Settlement; mainly ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[defName="Pirate"]/pawnGroupMakers/li[7]/options</xpath>
+	<value>
+        <Leo_Thrasher>0.6</Leo_Thrasher>
+        <Leo_Pirate>2</Leo_Pirate>
+        <Leo_Grenadier_Destructive>0.4</Leo_Grenadier_Destructive>
+		<Leo_Mercenary_Slasher>0.6</Leo_Mercenary_Slasher>
+		<Leo_Mercenary_Sniper>2</Leo_Mercenary_Sniper>
+		<Leo_Mercenary_Gunner>2</Leo_Mercenary_Gunner>
+		<Leo_Mercenary_Elite>2</Leo_Mercenary_Elite>
+        <Leo_PirateBoss>2</Leo_PirateBoss>
+	</value>
+	</Operation>
+	
+	<!-- Outlander -->
+	<!-- Outlander Raid; standard mix -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Leo_Villager>1</Leo_Villager>
+        <Leo_Town_Guard>2</Leo_Town_Guard>
+        <Leo_Grenadier_Destructive>0.3</Leo_Grenadier_Destructive>
+		<Leo_Mercenary_Slasher>1.4</Leo_Mercenary_Slasher>
+		<Leo_Mercenary_Gunner>2</Leo_Mercenary_Gunner>
+		<Leo_Mercenary_Elite>2</Leo_Mercenary_Elite>
+        <Leo_Town_Councilman>2</Leo_Town_Councilman>
+	</value>
+	</Operation>
+	
+	<!-- Outlander Peaceful -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Leo_Villager>4</Leo_Villager>
+        <Leo_Town_Guard>2</Leo_Town_Guard>
+        <Leo_Town_Councilman>2</Leo_Town_Councilman>
+	</value>
+	</Operation>
+
+	<!-- Outlander Traders -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+	<value>
+        <Leo_Villager>0.6</Leo_Villager>
+        <Leo_Town_Guard>2</Leo_Town_Guard>
+        <Leo_Grenadier_Destructive>0.3</Leo_Grenadier_Destructive>
+        <Leo_Mercenary_Slasher>1.4</Leo_Mercenary_Slasher>
+        <Leo_Mercenary_Gunner>2</Leo_Mercenary_Gunner>
+		<Leo_Mercenary_Elite>2</Leo_Mercenary_Elite>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/traders</xpath>
+	<value>
+        <Leo_Town_Trader>0.2</Leo_Town_Trader>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+	<value>
+		<Leo_Villager>2</Leo_Villager>
+        <Leo_Town_Guard>2</Leo_Town_Guard>
+        <Leo_Grenadier_Destructive>0.3</Leo_Grenadier_Destructive>
+		<Leo_Mercenary_Slasher>1.4</Leo_Mercenary_Slasher>
+        <Leo_Mercenary_Gunner>2</Leo_Mercenary_Gunner>
+        <Leo_Mercenary_Elite>2</Leo_Mercenary_Elite>
+        <Leo_Town_Councilman>2</Leo_Town_Councilman>
+	</value>
+	</Operation>
+
+	<!-- Villager -->
+	<!-- Villager Raid 1; 100 commonality, ranged with melee mix-ins -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[1]/options</xpath>
+	<value>
+        <Leo_Tribal_Penitent>1</Leo_Tribal_Penitent>
+        <Leo_Tribal_Warrior>1</Leo_Tribal_Warrior>
+        <Leo_Tribal_Archer>2</Leo_Tribal_Archer>
+        <Leo_Tribal_Hunter>2</Leo_Tribal_Hunter>
+        <Leo_Tribal_HeavyArcher>2</Leo_Tribal_HeavyArcher>
+        <Leo_Tribal_Berserker>1</Leo_Tribal_Berserker>
+        <Leo_Tribal_ChiefRanged>0.6</Leo_Tribal_ChiefRanged>
+        <Leo_Tribal_ChiefMelee>0.3</Leo_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Raid 2; 60 commonality, ranged only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[2]/options</xpath>
+	<value>
+        <Leo_Tribal_Archer>2</Leo_Tribal_Archer>
+        <Leo_Tribal_Hunter>2</Leo_Tribal_Hunter>
+        <Leo_Tribal_HeavyArcher>2</Leo_Tribal_HeavyArcher>
+        <Leo_Tribal_ChiefRanged>1</Leo_Tribal_ChiefRanged>
+	</value>
+	</Operation>
+
+	<!-- Villager Raid 3; 60 commonality, melee only -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+	<value>
+        <Leo_Tribal_Penitent>2</Leo_Tribal_Penitent>
+        <Leo_Tribal_Warrior>2</Leo_Tribal_Warrior>
+        <Leo_Tribal_Berserker>2</Leo_Tribal_Berserker>
+        <Leo_Tribal_ChiefMelee>1</Leo_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Peaceful -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[5]/options</xpath>
+	<value>
+        <Leo_Tribal_Warrior>4</Leo_Tribal_Warrior>
+        <Leo_Tribal_Archer>2</Leo_Tribal_Archer>
+        <Leo_Tribal_Hunter>2</Leo_Tribal_Hunter>
+        <Leo_Tribal_HeavyArcher>2</Leo_Tribal_HeavyArcher>
+        <Leo_Tribal_Berserker>1</Leo_Tribal_Berserker>
+        <Leo_Tribal_ChiefRanged>0.6</Leo_Tribal_ChiefRanged>
+        <Leo_Tribal_ChiefMelee>0.3</Leo_Tribal_ChiefMelee>
+	</value>
+	</Operation>
+
+	<!-- Villager Traders -->
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/guards</xpath>
+	<value>
+        <Leo_Tribal_Warrior>1.4</Leo_Tribal_Warrior>
+        <Leo_Tribal_Archer>2</Leo_Tribal_Archer>
+        <Leo_Tribal_Hunter>2</Leo_Tribal_Hunter>
+        <Leo_Tribal_HeavyArcher>2</Leo_Tribal_HeavyArcher>
+        <Leo_Tribal_Berserker>1.4</Leo_Tribal_Berserker>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/traders</xpath>
+	<value>
+        <Leo_Tribal_Trader>0.2</Leo_Tribal_Trader>
+	</value>
+	</Operation>
+
+	<!-- Settlement -->
+
+	<Operation Class="PatchOperationAdd">
+	<xpath>*/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[7]/options</xpath>
+	<value>
+          <Leo_Tribal_Warrior>1.4</Leo_Tribal_Warrior>
+          <Leo_Tribal_Archer>2</Leo_Tribal_Archer>
+          <Leo_Tribal_Hunter>2</Leo_Tribal_Hunter>
+          <Leo_Tribal_HeavyArcher>2</Leo_Tribal_HeavyArcher>
+          <Leo_Tribal_Berserker>1.4</Leo_Tribal_Berserker>
+          <Leo_Tribal_ChiefRanged>2</Leo_Tribal_ChiefRanged>
+	</value>
+	</Operation>
+
+</Patch>
