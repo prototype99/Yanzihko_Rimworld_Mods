@@ -42,6 +42,8 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>100</lifeExpectancy>
+			<bloodDef>Filth_Blood</bloodDef>
+			<bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
 			<useMeatFrom>Human</useMeatFrom>
 			<nameCategory>HumanStandard</nameCategory>
 			<!--Name Gen-->
